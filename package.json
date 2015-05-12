@@ -1,0 +1,22 @@
+{
+  "name": "react-media-object",
+  "version": "0.0.1",
+  "description": "A media-object implementation in React.js",
+  "main": "ReactMediaObject.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chantastic/react-media-object.git"
+  },
+  "keywords": [
+    "media-object"
+  ],
+  "author": "Michael Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chantastic/react-media-object/issues"
+  },
+  "homepage": "https://github.com/chantastic/react-media-object"
+}
