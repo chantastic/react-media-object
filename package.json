@@ -4,7 +4,7 @@
   "description": "A media-object implementation in React.js",
   "main": "ReactMediaObject.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/chantastic/react-media-object/issues"
   },
-  "homepage": "https://github.com/chantastic/react-media-object"
+  "homepage": "https://github.com/chantastic/react-media-object",
+  "devDependencies": {
+    "jest-cli": "^0.4.3"
+  }
 }
