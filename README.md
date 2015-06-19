@@ -1,6 +1,6 @@
 # React Media Object
 
-__COMPONENT DESCRIPTION GOES HERE__
+The [Media Object] in React
 
 
 ## Demo & Examples
@@ -30,22 +30,31 @@ npm install react-media-object --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
+ReactMediaObject is four components, half of which are optional
 
+```js
+var { Media, MediaImg, MediaImgExt, MediaBd } = require('react-media-object');
+
+// With optional reagons
+<Media>
+  <MediaImg href="http://twitter.com/chantastic">
+    <MediaImgExt src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
+  </MediaImg>
+
+  <MediaBd>
+    I've spent most of my career focused on taming styles in CSS. I saw it as a
+    problem that would never be solved. Then, <i>#reactjs</i> happened.
+  </MediaBd>
+</Media>
+
+// With only required reagons
+<Media>
+  <MediaBd>
+    I've spent most of my career focused on taming styles in CSS. I saw it as a
+    problem that would never be solved. Then, <i>#reactjs</i> happened.
+  </MediaBd>
+</Media>
 ```
-var ReactMediaObject = require('react-media-object');
-
-<ReactMediaObject>Example</ReactMediaObject>
-```
-
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
-
-### Notes
-
-__ADDITIONAL USAGE NOTES__
-
 
 ## Development (`src`, `lib` and the build process)
 
@@ -55,7 +64,24 @@ To build, watch and serve the examples (which will also watch the component sour
 
 ## License
 
-__PUT LICENSE HERE__
+The MIT License (MIT)
 
-Copyright (c) 2015 Michael Chan.
+Copyright (c) 2015 Michael Chan
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
