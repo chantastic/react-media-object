@@ -1,7 +1,7 @@
 {
   "name": "react-media-object",
-  "version": "0.0.0",
-  "description": "React Media Object",
+  "version": "0.0.2",
+  "description": "A React.js Media-Object",
   "main": "src/ReactMediaObject.js",
   "author": "Michael Chan",
   "homepage": "https://github.com/chantastic/react-media-object",

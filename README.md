@@ -1,6 +1,6 @@
 # React Media Object
 
-The [Media Object] in React
+A React.js Media-Object
 
 
 ## Demo & Examples
