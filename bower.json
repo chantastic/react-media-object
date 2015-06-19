@@ -1,20 +1,16 @@
 {
   "name": "react-media-object",
-  "version": "0.0.0",
-  "description": "React Media Object",
+  "version": "0.0.2",
+  "description": "A React.js Media-Object",
   "main": "dist/react-media-object.min.js",
   "homepage": "https://github.com/chantastic/react-media-object",
   "authors": [
     "Michael Chan"
   ],
-  "moduleType": [
-    "amd",
-    "globals",
-    "node"
-  ],
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "media-object"
   ],
   "license": "MIT",
   "ignore": [
@@ -24,6 +20,9 @@
     "src",
     "node_modules",
     "example",
-    "test"
+    "test",
+    "**/.*",
+    "bower_components",
+    "tests"
   ]
 }
