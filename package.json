@@ -4,6 +4,7 @@
   "description": "A React.js Media-Object",
   "main": "src/ReactMediaObject.js",
   "author": "Michael Chan",
+  "license": "MIT",
   "homepage": "https://github.com/chantastic/react-media-object",
   "repository": {
     "type": "git",
