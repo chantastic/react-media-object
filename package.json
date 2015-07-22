@@ -2,7 +2,7 @@
   "name": "react-media-object",
   "version": "0.0.2",
   "description": "A React.js Media-Object",
-  "main": "src/ReactMediaObject.js",
+  "main": "lib/ReactMediaObject.js",
   "author": "Michael Chan",
   "license": "MIT",
   "homepage": "https://github.com/chantastic/react-media-object",
