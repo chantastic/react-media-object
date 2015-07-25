@@ -24,6 +24,9 @@
     "react": "^0.13.3",
     "gulp": "^3.8.11"
   },
+  "peerDependencies": {
+    "react": ">=0.13.3"
+  },
   "browserify-shim": {
     "react": "global:React"
   },
