@@ -1,5 +1,5 @@
 var React = require('react');
-var { Media, MediaImg, MediaImgExt, MediaBd } = require('react-media-object');
+var { Media, Img, ImgExt, Bd } = require('react-media-object');
 
 var App = React.createClass({
   render () {
@@ -9,13 +9,13 @@ var App = React.createClass({
           <h2 className="demo-heading"> With optional regions </h2>
           <div className="demo-block">
             <Media>
-              <MediaImg href="http://twitter.com/chantastic">
-                <MediaImgExt
+              <Img href="http://twitter.com/chantastic">
+                <ImgExt
                 src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e"
                 alt="chantastic" />
-              </MediaImg>
+              </Img>
 
-              <MediaBd>
+              <Bd>
                 I've spent most of my career focused on taming styles in CSS. I
                 saw it as a problem that would never be solved. Then, #reactjs
                 happened.
@@ -23,7 +23,7 @@ var App = React.createClass({
                   <a href="http://twitter.com/chantastic">@chantastic</a>
                   <span className="detail"> 7 hours ago</span>
                 </div>
-              </MediaBd>
+              </Bd>
             </Media>
           </div>
         </section>
@@ -32,10 +32,10 @@ var App = React.createClass({
           <h2 className="demo-heading"> Without optional <code>imgExt</code> </h2>
           <div className="demo-block">
             <Media>
-              <MediaImg href="http://twitter.com/chantastic">
+              <Img href="http://twitter.com/chantastic">
                 chantastic
-              </MediaImg>
-              <MediaBd>
+              </Img>
+              <Bd>
                 I've spent most of my career focused on taming styles in CSS. I
                 saw it as a problem that would never be solved. Then, #reactjs
                 happened.
@@ -43,7 +43,7 @@ var App = React.createClass({
                   <a href="http://twitter.com/chantastic">@chantastic</a>&nbsp;
                   <span className="detail"> 7 hours ago</span>
                 </div>
-              </MediaBd>
+              </Bd>
             </Media>
           </div>
         </section>
@@ -52,7 +52,7 @@ var App = React.createClass({
           <h2 className="demo-heading"> Without optional <code>img</code> </h2>
           <div className="demo-block">
             <Media>
-              <MediaBd>
+              <Bd>
                 <div>
                   I've spent most of my career focused on taming styles in CSS. I
                   saw it as a problem that would never be solved. Then, #reactjs
@@ -60,7 +60,7 @@ var App = React.createClass({
                   <a href="http://twitter.com/chantastic">@chantastic</a>
                   <span className="detail"> 7 hours ago</span>
                 </div>
-              </MediaBd>
+              </Bd>
             </Media>
           </div>
         </section>
