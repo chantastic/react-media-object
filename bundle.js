@@ -79,86 +79,86 @@ Media.propTypes = {
   children: _react.PropTypes.node.isRequired
 };
 
-var MediaImg = (function (_Component2) {
-  function MediaImg() {
-    _classCallCheck(this, MediaImg);
+var Img = (function (_Component2) {
+  function Img() {
+    _classCallCheck(this, Img);
 
     if (_Component2 != null) {
       _Component2.apply(this, arguments);
     }
   }
 
-  _inherits(MediaImg, _Component2);
+  _inherits(Img, _Component2);
 
-  _createClass(MediaImg, [{
+  _createClass(Img, [{
     key: 'render',
     value: function render() {
       return _react2['default'].createElement('a', _extends({ className: 'img', style: mediaStyles.img }, this.props));
     }
   }]);
 
-  return MediaImg;
+  return Img;
 })(_react.Component);
 
-MediaImg.propTypes = {
+Img.propTypes = {
   children: _react.PropTypes.node.isRequired,
   href: _react.PropTypes.string.isRequired
 };
 
-var MediaImgExt = (function (_Component3) {
-  function MediaImgExt() {
-    _classCallCheck(this, MediaImgExt);
+var ImgExt = (function (_Component3) {
+  function ImgExt() {
+    _classCallCheck(this, ImgExt);
 
     if (_Component3 != null) {
       _Component3.apply(this, arguments);
     }
   }
 
-  _inherits(MediaImgExt, _Component3);
+  _inherits(ImgExt, _Component3);
 
-  _createClass(MediaImgExt, [{
+  _createClass(ImgExt, [{
     key: 'render',
     value: function render() {
       return _react2['default'].createElement('img', _extends({ style: mediaStyles.imgExt }, this.props));
     }
   }]);
 
-  return MediaImgExt;
+  return ImgExt;
 })(_react.Component);
 
-MediaImgExt.propTypes = {
+ImgExt.propTypes = {
   alt: _react.PropTypes.string.isRequired,
   src: _react.PropTypes.string.isRequired
 };
 
-var MediaBd = (function (_Component4) {
-  function MediaBd() {
-    _classCallCheck(this, MediaBd);
+var Bd = (function (_Component4) {
+  function Bd() {
+    _classCallCheck(this, Bd);
 
     if (_Component4 != null) {
       _Component4.apply(this, arguments);
     }
   }
 
-  _inherits(MediaBd, _Component4);
+  _inherits(Bd, _Component4);
 
-  _createClass(MediaBd, [{
+  _createClass(Bd, [{
     key: 'render',
     value: function render() {
       return _react2['default'].createElement('div', _extends({ className: 'bd', style: mediaStyles.bd }, this.props));
     }
   }]);
 
-  return MediaBd;
+  return Bd;
 })(_react.Component);
 
-MediaBd.propTypes = {
+Bd.propTypes = {
   children: _react.PropTypes.node
 };
 
 exports.Media = Media;
-exports.MediaImg = MediaImg;
-exports.MediaImgExt = MediaImgExt;
-exports.MediaBd = MediaBd;
+exports.Img = Img;
+exports.ImgExt = ImgExt;
+exports.Bd = Bd;
 
 },{"react":undefined}]},{},[]);

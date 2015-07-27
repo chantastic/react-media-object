@@ -6,9 +6,9 @@ var React = require('react');
 var _require = require('react-media-object');
 
 var Media = _require.Media;
-var MediaImg = _require.MediaImg;
-var MediaImgExt = _require.MediaImgExt;
-var MediaBd = _require.MediaBd;
+var Img = _require.Img;
+var ImgExt = _require.ImgExt;
+var Bd = _require.Bd;
 
 var App = React.createClass({
   displayName: 'App',
@@ -32,14 +32,14 @@ var App = React.createClass({
             Media,
             null,
             React.createElement(
-              MediaImg,
+              Img,
               { href: 'http://twitter.com/chantastic' },
-              React.createElement(MediaImgExt, {
+              React.createElement(ImgExt, {
                 src: 'http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e',
                 alt: 'chantastic' })
             ),
             React.createElement(
-              MediaBd,
+              Bd,
               null,
               'I\'ve spent most of my career focused on taming styles in CSS. I saw it as a problem that would never be solved. Then, #reactjs happened.',
               React.createElement(
@@ -81,12 +81,12 @@ var App = React.createClass({
             Media,
             null,
             React.createElement(
-              MediaImg,
+              Img,
               { href: 'http://twitter.com/chantastic' },
               'chantastic'
             ),
             React.createElement(
-              MediaBd,
+              Bd,
               null,
               'I\'ve spent most of my career focused on taming styles in CSS. I saw it as a problem that would never be solved. Then, #reactjs happened.',
               React.createElement(
@@ -129,7 +129,7 @@ var App = React.createClass({
             Media,
             null,
             React.createElement(
-              MediaBd,
+              Bd,
               null,
               React.createElement(
                 'div',
