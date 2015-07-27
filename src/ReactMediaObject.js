@@ -45,36 +45,36 @@ Media.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-class MediaImg extends Component {
+class Img extends Component {
   render () {
     return <a className="img" style={mediaStyles.img} {...this.props} />;
   }
 }
 
-MediaImg.propTypes = {
+Img.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired
 };
 
-class MediaImgExt extends Component {
+class ImgExt extends Component {
   render () {
     return <img style={mediaStyles.imgExt} {...this.props} />;
   }
 }
 
-MediaImgExt.propTypes = {
+ImgExt.propTypes = {
   alt: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired
 };
 
-class MediaBd extends Component {
+class Bd extends Component {
   render () {
     return <div className="bd" style={mediaStyles.bd} {...this.props} />;
   }
 }
 
-MediaBd.propTypes = {
+Bd.propTypes = {
   children: PropTypes.node
 };
 
-export { Media, MediaImg, MediaImgExt, MediaBd };
+export { Media, Img, ImgExt, Bd };
