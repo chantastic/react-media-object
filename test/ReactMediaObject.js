@@ -2,54 +2,43 @@ import assert from "assert";
 import React, { addons } from "react/addons";
 import { Media } from "../src/ReactMediaObject.js";
 
-let shallowRenderer = addons.TestUtils.createRenderer();
+let TestUtils = addons.TestUtils;
 
 describe("ReactMediaObject.Meda", () => {
-  let result;
+  let component, node;
 
   before(() => {
-    shallowRenderer.render(<Media><div /></Media>);
-    result = shallowRenderer.getRenderOutput();
+    component = TestUtils.renderIntoDocument(<Media><div /></Media>);
+    node = React.findDOMNode(component);
   });
 
   it("renders a `div` is it's root element", () => {
-    assert.strictEqual(result.type, "div");
+    assert.strictEqual(node.tagName, "DIV");
   });
 
   it("renders with the `className` media", () => {
-    assert.strictEqual(result.props.className, "media");
+    assert.strictEqual(node.className, "media");
   });
 
   it("has a styled `:before`-like element", () => {
-    assert.strictEqual(result.type, "div");
-    assert.strictEqual(result.props.children[0].props.style.display, "table");
+    assert.strictEqual(node.tagName, "DIV");
+    console.log(node.children[0].style.display, "table");
   });
 
   it("has a styled `:after`-like element", () => {
-    assert.strictEqual(result.type, "div");
+    assert.strictEqual(node.tagName, "DIV");
 
-    let lastChildIndex = result.props.children.length -1;
-    assert.strictEqual(result.props.children[lastChildIndex].props.style.display, "table");
-    assert.strictEqual(result.props.children[lastChildIndex].props.style.clear, "both");
+    let lastChildIndex = node.children.length -1;
+    assert.strictEqual(node.children[lastChildIndex].style.display, "table");
+    assert.strictEqual(node.children[lastChildIndex].style.clear, "both");
   });
 
   it("renders `props.children` between before/after elements", () => {
-    shallowRenderer.render(<Media><blockquote className="test-child" /></Media>);
-    result = shallowRenderer.getRenderOutput();
+    component = TestUtils.renderIntoDocument(<Media><blockquote className="test-child" /></Media>);
+    node = React.findDOMNode(component);
 
-    assert.strictEqual(result.props.children.length, 3);
-    assert.strictEqual(result.props.children[1].type, "blockquote");
-    assert.strictEqual(result.props.children[1].props.className, "test-child");
+    assert.strictEqual(node.children.length, 3);
+    assert.strictEqual(node.children[1].tagName, "BLOCKQUOTE");
+    assert.strictEqual(node.children[1].className, "test-child");
   });
-
-  // sample state test that would fail without global.document
-  // it("accepts React events as props", () => {
-  //   shallowRenderer.render(<Media />);
-  //   result = shallowRenderer.getRenderOutput();
-
-  //   let mockEvent = {};
-  //   result.props.onClick(mockEvent);
-  //   let postClickResult = shallowRenderer.getRenderOutput();
-  //   // assert state change
-  // });
 });
