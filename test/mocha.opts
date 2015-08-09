@@ -1,1 +1,2 @@
+--require test/utils/document.js
 --compilers js:babel/register
