@@ -1,3 +1,9 @@
+/*
+ * generator-react-component does not ship with a DOM implementation.
+ * This means that test utilities like `Simulate` and `renderIntoDocmuent` are not available.
+ * To enable these utilities, see `test/document.js` for additional configuration options.
+ */
+
 import assert from "assert";
 import React, { addons } from "react/addons";
 import { Media } from "../src/ReactMediaObject.js";
@@ -41,15 +47,4 @@ describe("ReactMediaObject.Meda", () => {
     assert.strictEqual(result.props.children[1].type, "blockquote");
     assert.strictEqual(result.props.children[1].props.className, "test-child");
   });
-
-  // sample state test that would fail without global.document
-  // it("accepts React events as props", () => {
-  //   shallowRenderer.render(<Media />);
-  //   result = shallowRenderer.getRenderOutput();
-
-  //   let mockEvent = {};
-  //   result.props.onClick(mockEvent);
-  //   let postClickResult = shallowRenderer.getRenderOutput();
-  //   // assert state change
-  // });
 });
