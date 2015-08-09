@@ -17,6 +17,7 @@
     "classnames": "^2.1.1"
   },
   "devDependencies": {
+    "babel": "^5.8.21",
     "babel-eslint": "^3.1.9",
     "eslint": "^0.21.2",
     "eslint-plugin-react": "^2.3.0",
