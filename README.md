@@ -33,26 +33,26 @@ npm install react-media-object --save
 ReactMediaObject is four components, half of which are optional
 
 ```js
-var { Media, MediaImg, MediaImgExt, MediaBd } = require('react-media-object');
+var { Media, Img, ImgExt, Bd } = require('react-media-object');
 
 // With optional reagons
 <Media>
-  <MediaImg href="http://twitter.com/chantastic">
-    <MediaImgExt src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
-  </MediaImg>
+  <Img href="http://twitter.com/chantastic">
+    <ImgExt src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
+  </Img>
 
-  <MediaBd>
+  <Bd>
     I've spent most of my career focused on taming styles in CSS. I saw it as a
     problem that would never be solved. Then, <i>#reactjs</i> happened.
-  </MediaBd>
+  </Bd>
 </Media>
 
 // With only required reagons
 <Media>
-  <MediaBd>
+  <Bd>
     I've spent most of my career focused on taming styles in CSS. I saw it as a
     problem that would never be solved. Then, <i>#reactjs</i> happened.
-  </MediaBd>
+  </Bd>
 </Media>
 ```
 
