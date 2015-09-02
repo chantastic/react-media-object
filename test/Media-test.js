@@ -2,11 +2,11 @@ import assert from "assert";
 import sinon from "sinon";
 
 import React, { addons } from "react/addons";
-import { Media } from "../src/ReactMediaObject.js";
+import Media from "../src/Media.js";
 
 let shallowRenderer = addons.TestUtils.createRenderer();
 
-describe("ReactMediaObject.Media", () => {
+describe("Media", () => {
   let result;
 
   before(() => {
