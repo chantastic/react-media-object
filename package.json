@@ -41,6 +41,7 @@
     "release": "gulp release",
     "start": "gulp dev",
     "test": "mocha",
+    "test:watch": "node_modules/.bin/_mocha --watch",
     "watch": "gulp watch:lib"
   },
   "keywords": [
