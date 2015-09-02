@@ -1,1 +1,3 @@
-global.document = {};
+global.document = {
+  createElement: function () {}
+};

@@ -24,7 +24,8 @@
     "gulp": "^3.8.11",
     "mocha": "^2.2.5",
     "react": "^0.13.3",
-    "react-component-gulp-tasks": "^0.7.0"
+    "react-component-gulp-tasks": "^0.7.0",
+    "sinon": "^1.16.1"
   },
   "peerDependencies": {
     "react": ">=0.13.3"
