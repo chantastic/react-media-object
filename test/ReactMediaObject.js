@@ -1,4 +1,6 @@
 import assert from "assert";
+import sinon from "sinon";
+
 import React, { addons } from "react/addons";
 import { Media } from "../src/ReactMediaObject.js";
 
@@ -42,14 +44,14 @@ describe("ReactMediaObject.Media", () => {
     assert.strictEqual(result.props.children[1].props.className, "test-child");
   });
 
-  // sample state test that would fail without global.document
-  // it("accepts React events as props", () => {
-  //   shallowRenderer.render(<Media />);
-  //   result = shallowRenderer.getRenderOutput();
+  it("accepts event props", () => {
+    let spyCallback = sinon.spy();
 
-  //   let mockEvent = {};
-  //   result.props.onClick(mockEvent);
-  //   let postClickResult = shallowRenderer.getRenderOutput();
-  //   // assert state change
-  // });
+    shallowRenderer.render(<Media onClick={spyCallback}><div /></Media>);
+    result = shallowRenderer.getRenderOutput();
+
+    result.props.onClick();
+
+    assert.strictEqual(spyCallback.calledOnce, true);
+  });
 });
