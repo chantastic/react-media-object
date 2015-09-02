@@ -30,9 +30,17 @@ const mediaStyles = {
 };
 
 class Media extends Component {
+  get style () {
+    return Object.assign(
+      {},
+      mediaStyles.root,
+      this.props.style
+    );
+  }
+
   render() {
     return (
-      <div className="media" style={mediaStyles.root} {...this.props}>
+      <div className="media" {...this.props} style={this.style}>
         <div style={clearfixStyles[':before']} />
         {this.props.children}
         <div style={clearfixStyles[':after']} />
@@ -42,29 +50,48 @@ class Media extends Component {
 }
 
 Media.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  style: PropTypes.object
 };
 
 class Img extends Component {
+  get style () {
+    return Object.assign(
+      {},
+      mediaStyles.img,
+      this.props.style
+    );
+  }
+
   render () {
-    return <a className="img" style={mediaStyles.img} {...this.props} />;
+    return <a className="img" {...this.props} style={this.style} />;
   }
 }
 
 Img.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired
+  href: PropTypes.string.isRequired,
+  style: PropTypes.object
 };
 
 class ImgExt extends Component {
+  get style () {
+    return Object.assign(
+      {},
+      mediaStyles.imgExt,
+      this.props.style
+    );
+  }
+
   render () {
-    return <img style={mediaStyles.imgExt} {...this.props} />;
+    return <img {...this.props} style={this.style} />;
   }
 }
 
 ImgExt.propTypes = {
   alt: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  style: PropTypes.object
 };
 
 class Bd extends Component {
