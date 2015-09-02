@@ -1,0 +1,8 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "quotes": [2, "double", "avoid-escape"]
+  }
+}
