@@ -4,7 +4,7 @@ import { Media } from "../src/ReactMediaObject.js";
 
 let shallowRenderer = addons.TestUtils.createRenderer();
 
-describe("ReactMediaObject.Meda", () => {
+describe("ReactMediaObject.Media", () => {
   let result;
 
   before(() => {
@@ -12,7 +12,7 @@ describe("ReactMediaObject.Meda", () => {
     result = shallowRenderer.getRenderOutput();
   });
 
-  it("renders a `div` is it's root element", () => {
+  it("renders a `div` as it's root element", () => {
     assert.strictEqual(result.type, "div");
   });
 
