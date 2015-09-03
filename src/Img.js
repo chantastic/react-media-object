@@ -1,15 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 
-const styles = {
-  float: 'left',
-  marginRight: 10
-};
+function styles (reversed) {
+  return (reversed)
+    ? { float: 'right', marginLeft: 10 }
+    : { float: 'left', marginRight: 10 };
+}
 
 class Img extends Component {
   get style () {
     return Object.assign(
       {},
-      styles,
+      styles(this.props.reverse),
       this.props.style
     );
   }
@@ -22,6 +23,7 @@ class Img extends Component {
 Img.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
+  reverse: PropTypes.bool,
   style: PropTypes.object
 };
 
