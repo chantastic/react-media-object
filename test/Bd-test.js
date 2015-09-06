@@ -18,17 +18,6 @@ describe("Bd", () => {
     assert.strictEqual(result.type, "div");
   });
 
-  it("renders with the default class 'bd'", () => {
-    assert.strictEqual(result.props.className, "bd");
-  });
-
-  it("renders with the default class 'bd' and provided className", () => {
-    shallowRenderer.render(<Bd className="other"></Bd>);
-    result = shallowRenderer.getRenderOutput();
-
-    assert.strictEqual(result.props.className, "bd other");
-  });
-
   it("renders provided children", () => {
     assert.strictEqual(result.props.children, "Inner Text");
 
