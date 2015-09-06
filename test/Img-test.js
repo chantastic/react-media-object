@@ -22,6 +22,13 @@ describe("Img", () => {
     assert.strictEqual(result.props.className, "img");
   });
 
+  it("renders with the `className` 'img' plus props passed in via className", () => {
+    shallowRenderer.render(<Img href="" className="other"><div /></Img>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.strictEqual(result.props.className, "img other");
+  });
+
   it("element has default styles", () => {
     assert.strictEqual(result.props.style.float, "left");
     assert.strictEqual(result.props.style.marginRight, 10);

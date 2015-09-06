@@ -22,6 +22,13 @@ describe("ImgExt", () => {
     assert.strictEqual(result.props.className, undefined);
   });
 
+  it("renders with provided className", () => {
+    shallowRenderer.render(<ImgExt className="other" alt="sample alt" src="http://x.xxx" />);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.strictEqual(result.props.className, "other");
+  });
+
   it("renders with provided `alt` prop", () => {
     assert.strictEqual(result.props.alt, "sample alt");
   });

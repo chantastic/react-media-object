@@ -22,6 +22,13 @@ describe("Media", () => {
     assert.strictEqual(result.props.className, "media");
   });
 
+  it("renders with the `className` 'media' plus props passed in via className", () => {
+    shallowRenderer.render(<Media className="other"><div /></Media>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.strictEqual(result.props.className, "media other");
+  });
+
   it("has a styled `:before`-like element", () => {
     assert.strictEqual(result.type, "div");
     assert.strictEqual(result.props.children[0].props.style.display, "table");

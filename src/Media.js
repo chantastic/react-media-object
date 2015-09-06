@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 const clearfixStyles = {
   ':before': {
@@ -16,6 +17,12 @@ const styles = {
 };
 
 class Media extends Component {
+  get className () {
+    return classnames(
+      'media',
+      this.props.className
+    );
+  }
 
   get style () {
     return Object.assign(
@@ -27,7 +34,7 @@ class Media extends Component {
 
   render() {
     return (
-      <div className="media" {...this.props} style={this.style}>
+      <div {...this.props} className={this.className} style={this.style}>
         <div style={clearfixStyles[':before']} />
         {this.props.children}
         <div style={clearfixStyles[':after']} />
@@ -38,6 +45,7 @@ class Media extends Component {
 
 Media.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   style: PropTypes.object
 };
 

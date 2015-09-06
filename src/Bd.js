@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 const styles = {
   display: 'table-cell',
@@ -7,6 +8,13 @@ const styles = {
 };
 
 class Bd extends Component {
+  get className () {
+    return classnames(
+      'bd',
+      this.props.className
+    );
+  }
+
   get style () {
     return Object.assign(
       {},
@@ -16,12 +24,13 @@ class Bd extends Component {
   }
 
   render () {
-    return <div className="bd" {...this.props} style={this.style} />;
+    return <div {...this.props} className={this.className} style={this.style} />;
   }
 }
 
 Bd.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   style: PropTypes.object
 };
 
