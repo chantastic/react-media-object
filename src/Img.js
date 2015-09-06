@@ -10,12 +10,13 @@ class Img extends Component {
   get style () {
     return Object.assign(
       {},
-      styles(this.props.reverse),
+      styles(this.context.reverse),
       this.props.style
     );
   }
 
   render () {
+    console.log(this.context);
     return <a className="img" {...this.props} style={this.style} />;
   }
 }
@@ -23,8 +24,11 @@ class Img extends Component {
 Img.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
-  reverse: PropTypes.bool,
   style: PropTypes.object
+};
+
+Img.contextTypes = {
+  reverse: PropTypes.bool
 };
 
 export default Img;

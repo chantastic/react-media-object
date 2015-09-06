@@ -93,8 +93,8 @@ var App = React.createClass({
         <section className="section">
           <h2 className="demo-heading"> Right-aligned Img</h2>
           <div className="demo-block">
-            <Media>
-              <Img href="http://twitter.com/chantastic" reverse>
+            <Media reverse>
+              <Img href="http://twitter.com/chantastic">
                 <ImgExt
                  src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e"
                  alt="chantastic"

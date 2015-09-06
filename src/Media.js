@@ -16,6 +16,9 @@ const styles = {
 };
 
 class Media extends Component {
+  getChildContext () {
+    return { reverse: this.props.reverse };
+  }
 
   get style () {
     return Object.assign(
@@ -38,7 +41,12 @@ class Media extends Component {
 
 Media.propTypes = {
   children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,
   style: PropTypes.object
+};
+
+Media.childContextTypes = {
+  reverse: PropTypes.bool
 };
 
 export default Media;
