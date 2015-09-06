@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 const styles = {
   float: 'left',
@@ -6,6 +7,13 @@ const styles = {
 };
 
 class Img extends Component {
+  get className () {
+    return classnames(
+      'img',
+      this.props.className
+    );
+  }
+
   get style () {
     return Object.assign(
       {},
@@ -15,12 +23,13 @@ class Img extends Component {
   }
 
   render () {
-    return <a className="img" {...this.props} style={this.style} />;
+    return <a {...this.props} className={this.className} style={this.style} />;
   }
 }
 
 Img.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   href: PropTypes.string.isRequired,
   style: PropTypes.object
 };
