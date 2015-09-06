@@ -76,3 +76,18 @@ label {
   border-radius: 3px;
   box-shadow: 0 3px 3px -2px #cccccc;
 }
+.MyMedia {
+  color: red;
+  font-weight: bold;
+}
+.MyImg {
+  border-radius: 50%;
+}
+.MyImgExt {
+  border: 1px solid navy;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.MyBd {
+  font-style: oblique;
+}
