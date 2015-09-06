@@ -6,9 +6,198 @@ Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+var _react = (typeof window !== "undefined" ? window.React : typeof global !== "undefined" ? global.React : null);
+
+var _react2 = _interopRequireDefault(_react);
+
+var styles = {
+  display: 'table-cell',
+  verticalAlign: 'top',
+  width: '10000px !important'
+};
+
+var Bd = (function (_Component) {
+  function Bd() {
+    _classCallCheck(this, Bd);
+
+    if (_Component != null) {
+      _Component.apply(this, arguments);
+    }
+  }
+
+  _inherits(Bd, _Component);
+
+  _createClass(Bd, [{
+    key: 'render',
+    value: function render() {
+      return _react2['default'].createElement('div', _extends({}, this.props, { style: this.style }));
+    }
+  }, {
+    key: 'style',
+    get: function () {
+      return _extends({}, styles, this.props.style);
+    }
+  }]);
+
+  return Bd;
+})(_react.Component);
+
+Bd.propTypes = {
+  children: _react.PropTypes.node,
+  className: _react.PropTypes.string,
+  style: _react.PropTypes.object
+};
+
+exports['default'] = Bd;
+module.exports = exports['default'];
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],2:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+var _react = (typeof window !== "undefined" ? window.React : typeof global !== "undefined" ? global.React : null);
+
+var _react2 = _interopRequireDefault(_react);
+
+var styles = {
+  float: 'left',
+  marginRight: 10
+};
+
+var Img = (function (_Component) {
+  function Img() {
+    _classCallCheck(this, Img);
+
+    if (_Component != null) {
+      _Component.apply(this, arguments);
+    }
+  }
+
+  _inherits(Img, _Component);
+
+  _createClass(Img, [{
+    key: 'render',
+    value: function render() {
+      return _react2['default'].createElement('a', _extends({}, this.props, { style: this.style }));
+    }
+  }, {
+    key: 'style',
+    get: function () {
+      return _extends({}, styles, this.props.style);
+    }
+  }]);
+
+  return Img;
+})(_react.Component);
+
+Img.propTypes = {
+  children: _react.PropTypes.node.isRequired,
+  href: _react.PropTypes.string.isRequired,
+  style: _react.PropTypes.object
+};
+
+exports['default'] = Img;
+module.exports = exports['default'];
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],3:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+var _react = (typeof window !== "undefined" ? window.React : typeof global !== "undefined" ? global.React : null);
+
+var _react2 = _interopRequireDefault(_react);
+
+var styles = {
+  display: 'block'
+};
+
+var ImgExt = (function (_Component) {
+  function ImgExt() {
+    _classCallCheck(this, ImgExt);
+
+    if (_Component != null) {
+      _Component.apply(this, arguments);
+    }
+  }
+
+  _inherits(ImgExt, _Component);
+
+  _createClass(ImgExt, [{
+    key: 'render',
+    value: function render() {
+      return _react2['default'].createElement('img', _extends({}, this.props, { style: this.style }));
+    }
+  }, {
+    key: 'style',
+    get: function () {
+      return _extends({}, styles, this.props.style);
+    }
+  }]);
+
+  return ImgExt;
+})(_react.Component);
+
+ImgExt.propTypes = {
+  alt: _react.PropTypes.string.isRequired,
+  src: _react.PropTypes.string.isRequired,
+  style: _react.PropTypes.object
+};
+
+exports['default'] = ImgExt;
+module.exports = exports['default'];
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],4:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -30,23 +219,9 @@ var clearfixStyles = {
   }
 };
 
-var mediaStyles = {
-  root: {
-    marginTop: '1.5em',
-    marginBottom: '1.5em'
-  },
-  img: {
-    float: 'left',
-    marginRight: 10
-  },
-  imgExt: {
-    display: 'block'
-  },
-  bd: {
-    display: 'table-cell',
-    verticalAlign: 'top',
-    width: '10000px !important'
-  }
+var styles = {
+  marginTop: '1.5em',
+  marginBottom: '1.5em'
 };
 
 var Media = (function (_Component) {
@@ -65,11 +240,16 @@ var Media = (function (_Component) {
     value: function render() {
       return _react2['default'].createElement(
         'div',
-        _extends({ className: 'media', style: mediaStyles.root }, this.props),
+        _extends({}, this.props, { style: this.style }),
         _react2['default'].createElement('div', { style: clearfixStyles[':before'] }),
         this.props.children,
         _react2['default'].createElement('div', { style: clearfixStyles[':after'] })
       );
+    }
+  }, {
+    key: 'style',
+    get: function () {
+      return _extends({}, styles, this.props.style);
     }
   }]);
 
@@ -77,91 +257,43 @@ var Media = (function (_Component) {
 })(_react.Component);
 
 Media.propTypes = {
-  children: _react.PropTypes.node.isRequired
-};
-
-var Img = (function (_Component2) {
-  function Img() {
-    _classCallCheck(this, Img);
-
-    if (_Component2 != null) {
-      _Component2.apply(this, arguments);
-    }
-  }
-
-  _inherits(Img, _Component2);
-
-  _createClass(Img, [{
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement('a', _extends({ className: 'img', style: mediaStyles.img }, this.props));
-    }
-  }]);
-
-  return Img;
-})(_react.Component);
-
-Img.propTypes = {
   children: _react.PropTypes.node.isRequired,
-  href: _react.PropTypes.string.isRequired
+  style: _react.PropTypes.object
 };
 
-var ImgExt = (function (_Component3) {
-  function ImgExt() {
-    _classCallCheck(this, ImgExt);
-
-    if (_Component3 != null) {
-      _Component3.apply(this, arguments);
-    }
-  }
-
-  _inherits(ImgExt, _Component3);
-
-  _createClass(ImgExt, [{
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement('img', _extends({ style: mediaStyles.imgExt }, this.props));
-    }
-  }]);
-
-  return ImgExt;
-})(_react.Component);
-
-ImgExt.propTypes = {
-  alt: _react.PropTypes.string.isRequired,
-  src: _react.PropTypes.string.isRequired
-};
-
-var Bd = (function (_Component4) {
-  function Bd() {
-    _classCallCheck(this, Bd);
-
-    if (_Component4 != null) {
-      _Component4.apply(this, arguments);
-    }
-  }
-
-  _inherits(Bd, _Component4);
-
-  _createClass(Bd, [{
-    key: 'render',
-    value: function render() {
-      return _react2['default'].createElement('div', _extends({ className: 'bd', style: mediaStyles.bd }, this.props));
-    }
-  }]);
-
-  return Bd;
-})(_react.Component);
-
-Bd.propTypes = {
-  children: _react.PropTypes.node
-};
-
-exports.Media = Media;
-exports.Img = Img;
-exports.ImgExt = ImgExt;
-exports.Bd = Bd;
+exports['default'] = Media;
+module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[1])(1)
+},{}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _MediaJs = require('./Media.js');
+
+var _MediaJs2 = _interopRequireDefault(_MediaJs);
+
+var _ImgJs = require('./Img.js');
+
+var _ImgJs2 = _interopRequireDefault(_ImgJs);
+
+var _ImgExtJs = require('./ImgExt.js');
+
+var _ImgExtJs2 = _interopRequireDefault(_ImgExtJs);
+
+var _BdJs = require('./Bd.js');
+
+var _BdJs2 = _interopRequireDefault(_BdJs);
+
+exports.Media = _MediaJs2['default'];
+exports.Img = _ImgJs2['default'];
+exports.ImgExt = _ImgExtJs2['default'];
+exports.Bd = _BdJs2['default'];
+
+},{"./Bd.js":1,"./Img.js":2,"./ImgExt.js":3,"./Media.js":4}]},{},[5])(5)
 });
