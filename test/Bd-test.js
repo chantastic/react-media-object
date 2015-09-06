@@ -18,10 +18,6 @@ describe("Bd", () => {
     assert.strictEqual(result.type, "div");
   });
 
-  it("renders with the default class 'bd'", () => {
-    assert.strictEqual(result.props.className, "bd");
-  });
-
   it("renders provided children", () => {
     assert.strictEqual(result.props.children, "Inner Text");
 

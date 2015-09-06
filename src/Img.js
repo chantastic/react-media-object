@@ -15,7 +15,7 @@ class Img extends Component {
   }
 
   render () {
-    return <a className="img" {...this.props} style={this.style} />;
+    return <a {...this.props} style={this.style} />;
   }
 }
 

@@ -18,10 +18,6 @@ describe("Media", () => {
     assert.strictEqual(result.type, "div");
   });
 
-  it("renders with the `className` media", () => {
-    assert.strictEqual(result.props.className, "media");
-  });
-
   it("has a styled `:before`-like element", () => {
     assert.strictEqual(result.type, "div");
     assert.strictEqual(result.props.children[0].props.style.display, "table");

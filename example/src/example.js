@@ -90,6 +90,29 @@ var App = React.createClass({
           </div>
         </section>
 
+        <section className="section">
+          <h2 className="demo-heading"> With additional className </h2>
+          <div className="demo-block">
+            <Media className="MyMedia">
+              <Img className="MyImg" href="http://twitter.com/chantastic">
+                <ImgExt
+                  className="MyImgExt"
+                  src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e"
+                  alt="chantastic" />
+              </Img>
+              <Bd className="MyBd">
+                <div>
+                  I've spent most of my career focused on taming styles in CSS. I
+                  saw it as a problem that would never be solved. Then, #reactjs
+                  happened.
+                  <a href="http://twitter.com/chantastic">@chantastic</a>
+                  <span className="detail"> 7 hours ago</span>
+                </div>
+              </Bd>
+            </Media>
+          </div>
+        </section>
+
         <h2 className="demo-heading"> TODO </h2>
         <ul>
           <li>Why doesn't instanceOf work as expected?</li>

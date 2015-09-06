@@ -18,10 +18,6 @@ describe("Img", () => {
     assert.strictEqual(result.type, "a");
   });
 
-  it("renders with the `className` img", () => {
-    assert.strictEqual(result.props.className, "img");
-  });
-
   it("element has default styles", () => {
     assert.strictEqual(result.props.style.float, "left");
     assert.strictEqual(result.props.style.marginRight, 10);

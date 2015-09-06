@@ -18,10 +18,6 @@ describe("ImgExt", () => {
     assert.strictEqual(result.type, "img");
   });
 
-  it("renders with the no `className`", () => {
-    assert.strictEqual(result.props.className, undefined);
-  });
-
   it("renders with provided `alt` prop", () => {
     assert.strictEqual(result.props.alt, "sample alt");
   });

@@ -16,7 +16,6 @@ const styles = {
 };
 
 class Media extends Component {
-
   get style () {
     return Object.assign(
       {},
@@ -27,7 +26,7 @@ class Media extends Component {
 
   render() {
     return (
-      <div className="media" {...this.props} style={this.style}>
+      <div {...this.props} style={this.style}>
         <div style={clearfixStyles[':before']} />
         {this.props.children}
         <div style={clearfixStyles[':after']} />

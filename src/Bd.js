@@ -16,12 +16,13 @@ class Bd extends Component {
   }
 
   render () {
-    return <div className="bd" {...this.props} style={this.style} />;
+    return <div {...this.props} style={this.style} />;
   }
 }
 
 Bd.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   style: PropTypes.object
 };
 
