@@ -1,5 +1,14 @@
 ## CHANGELOG
 
+### 0.0.5
+
+* [BREAKING CHANGE] remove default classes
+  + media
+  + img
+  + bd
+* [BREAKING CHANGE] merge props.style into default style. no longer wipes out default style
+* [FEATURE] add tests via `npm test` and `npm run test:watch`
+
 ### 0.0.4
 
 * [BREAKING CHANGE] remove namspacing
