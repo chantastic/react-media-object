@@ -9,7 +9,7 @@ let shallowRenderer = addons.TestUtils.createRenderer();
 describe("Media", () => {
   let result;
 
-  before(() => {
+  beforeEach(() => {
     shallowRenderer.render(<Media><div /></Media>);
     result = shallowRenderer.getRenderOutput();
   });

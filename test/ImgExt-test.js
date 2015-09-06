@@ -9,7 +9,7 @@ let shallowRenderer = addons.TestUtils.createRenderer();
 describe("ImgExt", () => {
   let result;
 
-  before(() => {
+  beforeEach(() => {
     shallowRenderer.render(<ImgExt alt="sample alt" src="http://x.xxx" />);
     result = shallowRenderer.getRenderOutput();
   });

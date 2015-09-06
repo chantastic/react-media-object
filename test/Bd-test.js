@@ -9,7 +9,7 @@ let shallowRenderer = addons.TestUtils.createRenderer();
 describe("Bd", () => {
   let result;
 
-  before(() => {
+  beforeEach(() => {
     shallowRenderer.render(<Bd>Inner Text</Bd>);
     result = shallowRenderer.getRenderOutput();
   });

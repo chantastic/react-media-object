@@ -9,7 +9,7 @@ let shallowRenderer = addons.TestUtils.createRenderer();
 describe("Img", () => {
   let result;
 
-  before(() => {
+  beforeEach(() => {
     shallowRenderer.render(<Img href=""><div /></Img>);
     result = shallowRenderer.getRenderOutput();
   });
