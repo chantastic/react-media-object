@@ -19,8 +19,32 @@ describe("Img", () => {
   });
 
   it("element has default styles", () => {
-    assert.strictEqual(result.props.style.float, "left");
-    assert.strictEqual(result.props.style.marginRight, 10);
+    assert.deepEqual(result.props.style, {
+      float: "left",
+      marginRight: 10
+    });
+  });
+
+  it("when given a style prop, it merges styles", () => {
+    shallowRenderer.render(<Img style={{ backgroundColor: "blue" }} href=""><div /></Img>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      backgroundColor: "blue",
+      float: "left",
+      marginRight: 10
+    });
+  });
+
+  it("when given a style prop, with a rule that overrides a default, it replaces the default", () => {
+    shallowRenderer.render(<Img style={{ float: "right", marginRight: 0, marginLeft: 10 }} href=""><div /></Img>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      float: "right",
+      marginRight: 0,
+      marginLeft: 10
+    });
   });
 
   /*

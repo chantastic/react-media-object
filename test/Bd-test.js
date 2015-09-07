@@ -33,9 +33,34 @@ describe("Bd", () => {
   });
 
   it("element has default styles", () => {
-    assert.strictEqual(result.props.style.display, "table-cell");
-    assert.strictEqual(result.props.style.verticalAlign, "top");
-    assert.strictEqual(result.props.style.width, "10000px !important");
+    assert.deepEqual(result.props.style, {
+      display: "table-cell",
+      verticalAlign: "top",
+      width: "10000px !important"
+    });
+  });
+
+  it("when given a style prop, it merges styles", () => {
+    shallowRenderer.render(<Bd style={{ backgroundColor: "blue" }}>Inner Text</Bd>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      backgroundColor: "blue",
+      display: "table-cell",
+      verticalAlign: "top",
+      width: "10000px !important"
+    });
+  });
+
+  it("when given a style prop, with a rule that overrides a default, it replaces the default", () => {
+    shallowRenderer.render(<Bd style={{ verticalAlign: "bottom" }}>Inner Text</Bd>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      display: "table-cell",
+      verticalAlign: "bottom",
+      width: "10000px !important"
+    });
   });
 
   it("accepts event props", () => {
