@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
+import styleResolver from './utils/styleResolver';
 
-const styles = {
-  display: 'block'
-};
+const styles = { display: 'block' };
 
-class ImgExt extends Component {
+export default class ImgExt extends Component {
   get style () {
     return Object.assign(
       {},
@@ -14,7 +13,12 @@ class ImgExt extends Component {
   }
 
   render () {
-    return <img {...this.props} style={this.style} />;
+    return (
+      <img
+       {...this.props}
+       style={styleResolver(styles, this.props)}
+      />
+    );
   }
 }
 
@@ -23,5 +27,3 @@ ImgExt.propTypes = {
   src: PropTypes.string.isRequired,
   style: PropTypes.object
 };
-
-export default ImgExt;

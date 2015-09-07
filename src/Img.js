@@ -1,21 +1,19 @@
 import React, { Component, PropTypes } from 'react';
+import styleResolver from './utils/styleResolver.js';
 
 const styles = {
   float: 'left',
   marginRight: 10
 };
 
-class Img extends Component {
-  get style () {
-    return Object.assign(
-      {},
-      styles,
-      this.props.style
-    );
-  }
-
+export default class Img extends Component {
   render () {
-    return <a {...this.props} style={this.style} />;
+    return (
+      <a
+       {...this.props}
+       style={styleResolver(styles, this.props)}
+      />
+    );
   }
 }
 
@@ -24,5 +22,3 @@ Img.propTypes = {
   href: PropTypes.string.isRequired,
   style: PropTypes.object
 };
-
-export default Img;

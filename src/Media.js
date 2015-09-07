@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styleResolver from './utils/styleResolver.js';
 
 const clearfixStyles = {
   ':before': {
@@ -15,18 +16,13 @@ const styles = {
   marginBottom: '1.5em'
 };
 
-class Media extends Component {
-  get style () {
-    return Object.assign(
-      {},
-      styles,
-      this.props.style
-    );
-  }
-
+export default class Media extends Component {
   render() {
     return (
-      <div {...this.props} style={this.style}>
+      <div
+       {...this.props}
+       style={styleResolver(styles, this.props)}
+      >
         <div style={clearfixStyles[':before']} />
         {this.props.children}
         <div style={clearfixStyles[':after']} />
@@ -39,5 +35,3 @@ Media.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.object
 };
-
-export default Media;
