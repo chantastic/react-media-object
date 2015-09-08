@@ -54,7 +54,7 @@ describe("Media", () => {
   it("has a styled `:after`-like element", () => {
     assert.strictEqual(result.type, "div");
 
-    let lastChildIndex = result.props.children.length -1;
+    let lastChildIndex = result.props.children.length - 1;
     assert.strictEqual(result.props.children[lastChildIndex].props.style.display, "table");
     assert.strictEqual(result.props.children[lastChildIndex].props.style.clear, "both");
   });
