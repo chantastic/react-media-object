@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 0.0.6
+
+* [FEATURE] add noDefaultStyle prop for clearing default styles
+* [FEATURE] extract styleResolver into reusable function
+
 ### 0.0.5
 
 * [BREAKING CHANGE] remove default classes
