@@ -1,7 +1,13 @@
-export default function style (base, props) {
+const nullBase = {};
+const nullProps = {
+  style: {},
+  noDefaultStyle: false
+};
+
+export default function style (base = nullBase, props = nullProps) {
   return Object.assign(
     {},
-    base,
+    !props.noDefaultStyle && base,
     props.style
   );
 }
