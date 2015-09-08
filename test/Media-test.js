@@ -18,6 +18,34 @@ describe("Media", () => {
     assert.strictEqual(result.type, "div");
   });
 
+  it("renders with default style", () => {
+    assert.deepEqual(result.props.style, {
+      marginTop: "1.5em",
+      marginBottom: "1.5em"
+    });
+  });
+
+  it("when given a style prop, it merges styles", () => {
+    shallowRenderer.render(<Media style={{ backgroundColor: "blue" }}><div /></Media>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      backgroundColor: "blue",
+      marginTop: "1.5em",
+      marginBottom: "1.5em"
+    });
+  });
+
+  it("when given a style prop, with a rule that overrides a default, it replaces the default", () => {
+    shallowRenderer.render(<Media style={{ marginTop: "3em" }}><div /></Media>);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      marginTop: "3em",
+      marginBottom: "1.5em"
+    });
+  });
+
   it("has a styled `:before`-like element", () => {
     assert.strictEqual(result.type, "div");
     assert.strictEqual(result.props.children[0].props.style.display, "table");
@@ -26,7 +54,7 @@ describe("Media", () => {
   it("has a styled `:after`-like element", () => {
     assert.strictEqual(result.type, "div");
 
-    let lastChildIndex = result.props.children.length -1;
+    let lastChildIndex = result.props.children.length - 1;
     assert.strictEqual(result.props.children[lastChildIndex].props.style.display, "table");
     assert.strictEqual(result.props.children[lastChildIndex].props.style.clear, "both");
   });

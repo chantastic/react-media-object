@@ -27,7 +27,26 @@ describe("ImgExt", () => {
   });
 
   it("element has default styles", () => {
-    assert.strictEqual(result.props.style.display, "block");
+    assert.deepEqual(result.props.style, { display: "block" });
+  });
+
+  it("when given a style prop, it merges styles", () => {
+    shallowRenderer.render(<ImgExt style={{ backgroundColor: "blue" }}alt="sample alt" src="http://x.xxx" />);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      display: "block",
+      backgroundColor: "blue"
+    });
+  });
+
+  it("when given a style prop, with a rule that overrides a default, it replaces the default", () => {
+    shallowRenderer.render(<ImgExt style={{ display: "inline-block" }}alt="sample alt" src="http://x.xxx" />);
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      display: "inline-block"
+    });
   });
 
   it("accepts event props", () => {
