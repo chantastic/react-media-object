@@ -240,6 +240,46 @@ var App = React.createClass({
         )
       ),
       React.createElement(
+        'section',
+        { className: 'section' },
+        React.createElement(
+          'h2',
+          { className: 'demo-heading' },
+          ' noDefaultStyle prop '
+        ),
+        React.createElement(
+          'div',
+          { className: 'demo-block' },
+          React.createElement(
+            Media,
+            { noDefaultStyle: true },
+            React.createElement(
+              Img,
+              { noDefaultStyle: true, href: 'http://twitter.com/chantastic' },
+              React.createElement(ImgExt, {
+                noDefaultStyle: true,
+                src: 'http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e',
+                alt: 'chantastic' })
+            ),
+            React.createElement(
+              Bd,
+              { noDefaultStyle: true },
+              'I\'ve spent most of my career focused on taming styles in CSS. I saw it as a problem that would never be solved. Then, #reactjs happened.',
+              React.createElement(
+                'a',
+                { href: 'http://twitter.com/chantastic' },
+                '@chantastic'
+              ),
+              React.createElement(
+                'span',
+                null,
+                ' 7 hours ago'
+              )
+            )
+          )
+        )
+      ),
+      React.createElement(
         'h2',
         { className: 'demo-heading' },
         ' TODO '
