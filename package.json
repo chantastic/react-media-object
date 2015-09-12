@@ -37,6 +37,7 @@
     "build": "gulp clean && NODE_ENV=production gulp build",
     "examples": "gulp dev:server",
     "lint": "eslint ./src",
+    "lint:fix": "node_modules/.bin/eslint ./src --fix",
     "publish:site": "gulp publish:examples",
     "release": "gulp release",
     "start": "gulp dev",
