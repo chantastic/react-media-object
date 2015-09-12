@@ -11,10 +11,7 @@ const clearfixStyles = {
   }
 };
 
-const styles = {
-  marginTop: '1.5em',
-  marginBottom: '1.5em'
-};
+const styles = null;
 
 export default class Media extends Component {
   render() {
