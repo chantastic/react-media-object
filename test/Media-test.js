@@ -18,7 +18,7 @@ describe("Media", () => {
     assert.strictEqual(result.type, "div");
   });
 
-  it("renders with default style", () => {
+  it("renders with no default style", () => {
     assert.deepEqual(result.props.style, {});
   });
 

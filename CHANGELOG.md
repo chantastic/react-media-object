@@ -1,6 +1,8 @@
 ## CHANGELOG
 
-* [BREAKING CHANGE] Remove `margin 1.5em` default style from `Media` component
+### 0.0.7
+
+* [BREAKING CHANGE] Remove default Media styles `margin: 0 1.5em`
 
 ### 0.0.6
 
