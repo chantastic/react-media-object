@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+* [BREAKING CHANGE] Remove `margin 1.5em` default style from `Media` component
+
 ### 0.0.6
 
 * [FEATURE] add noDefaultStyle prop for clearing default styles
