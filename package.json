@@ -17,7 +17,7 @@
     "classnames": "^2.1.1"
   },
   "devDependencies": {
-    "babel": "^5.8.21",
+    "babel": "^5.8.23",
     "babel-eslint": "^4.1.1",
     "eslint": "^1.4.1",
     "eslint-plugin-react": "^3.3.2",
@@ -25,6 +25,7 @@
     "mocha": "^2.2.5",
     "react": "^0.14.0-rc1",
     "react-component-gulp-tasks": "^0.7.0",
+    "react-dom": "0.14.0-rc1",
     "sinon": "^1.16.1"
   },
   "peerDependencies": {

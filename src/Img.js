@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styleResolver from './utils/styleResolver.js';
 
 const styles = {
@@ -6,16 +6,11 @@ const styles = {
   marginRight: 10
 };
 
-export default class Img extends Component {
-  render () {
-    return (
-      <a
-       {...this.props}
-       style={styleResolver(styles, this.props)}
-      />
-    );
-  }
-}
+const Img = (props) => (
+  <a {...props} style={styleResolver(styles, props)} />
+);
+
+export default Img;
 
 Img.propTypes = {
   children: PropTypes.node.isRequired,

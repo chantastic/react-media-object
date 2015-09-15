@@ -1,26 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styleResolver from './utils/styleResolver';
 
 const styles = { display: 'block' };
 
-export default class ImgExt extends Component {
-  get style () {
-    return Object.assign(
-      {},
-      styles,
-      this.props.style
-    );
-  }
+const ImgExt = (props) => (
+  <img {...props} style={styleResolver(styles, props)} />
+);
 
-  render () {
-    return (
-      <img
-       {...this.props}
-       style={styleResolver(styles, this.props)}
-      />
-    );
-  }
-}
+export default ImgExt;
 
 ImgExt.propTypes = {
   alt: PropTypes.string.isRequired,

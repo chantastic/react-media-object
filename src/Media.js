@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styleResolver from './utils/styleResolver.js';
 
 const clearfixStyles = {
@@ -13,20 +13,15 @@ const clearfixStyles = {
 
 const styles = null;
 
-export default class Media extends Component {
-  render() {
-    return (
-      <div
-       {...this.props}
-       style={styleResolver(styles, this.props)}
-      >
-        <div style={clearfixStyles[':before']} />
-        {this.props.children}
-        <div style={clearfixStyles[':after']} />
-      </div>
-    );
-  }
-}
+const Media = (props) => (
+  <div {...props} style={styleResolver(styles, props)} >
+    <div style={clearfixStyles[':before']} />
+    {props.children}
+    <div style={clearfixStyles[':after']} />
+  </div>
+);
+
+export default Media;
 
 Media.propTypes = {
   children: PropTypes.node.isRequired,

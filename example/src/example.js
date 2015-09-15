@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var { Media, Img, ImgExt, Bd } = require('react-media-object');
 
 var App = React.createClass({
@@ -146,4 +147,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
