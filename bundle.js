@@ -224,10 +224,7 @@ var clearfixStyles = {
   }
 };
 
-var styles = {
-  marginTop: '1.5em',
-  marginBottom: '1.5em'
-};
+var styles = null;
 
 var Media = (function (_Component) {
   _inherits(Media, _Component);
