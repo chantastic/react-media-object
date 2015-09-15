@@ -1,6 +1,6 @@
 {
   "name": "react-media-object",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A React.js Media-Object",
   "main": "dist/react-media-object.min.js",
   "homepage": "https://github.com/chantastic/react-media-object",
