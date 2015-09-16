@@ -17,7 +17,7 @@ function baseStyle (context) {
 }
 
 const Img = (props, context) => (
-    <a {...props} style={styleResolver(baseStyle(context), props, context)} />
+  <a {...props} style={styleResolver(baseStyle(context), props, context)} />
 );
 
 Img.propTypes = {

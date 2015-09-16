@@ -7,14 +7,14 @@ const styles = {
   width: '10000px !important'
 };
 
-const Bd = (props) => (
+const Bd = props => (
   <div {...props} style={styleResolver(styles, props)} />
 );
-
-export default Bd;
 
 Bd.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   style: PropTypes.object
 };
+
+export default Bd;
