@@ -19,6 +19,6 @@ export default class Img extends Component {
 
 Img.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   style: PropTypes.object
 };
