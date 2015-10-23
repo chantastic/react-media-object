@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### next
+### 0.0.8
 
 * [FIX] remove `.isRequired` from `Img` href PropType
 
