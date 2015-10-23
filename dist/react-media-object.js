@@ -121,7 +121,7 @@ exports['default'] = Img;
 
 Img.propTypes = {
   children: _react.PropTypes.node.isRequired,
-  href: _react.PropTypes.string.isRequired,
+  href: _react.PropTypes.string,
   style: _react.PropTypes.object
 };
 module.exports = exports['default'];
@@ -231,10 +231,7 @@ var clearfixStyles = {
   }
 };
 
-var styles = {
-  marginTop: '1.5em',
-  marginBottom: '1.5em'
-};
+var styles = null;
 
 var Media = (function (_Component) {
   _inherits(Media, _Component);
