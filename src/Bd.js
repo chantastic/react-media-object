@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import styleResolver from './utils/styleResolver';
 
 const styles = {
@@ -7,19 +7,14 @@ const styles = {
   width: '10000px !important'
 };
 
-export default class Bd extends Component {
-  render () {
-    return (
-      <div
-       {...this.props}
-       style={styleResolver(styles, this.props)}
-      />
-    );
-  }
-}
+const Bd = props => (
+  <div {...props} style={styleResolver(styles, props)} />
+);
 
 Bd.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   style: PropTypes.object
 };
+
+export default Bd;

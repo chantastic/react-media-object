@@ -3,6 +3,7 @@ import sinon from "sinon";
 
 import React, { addons } from "react/addons";
 import Img from "../src/Img.js";
+import Media from "../src/Media.js";
 
 let shallowRenderer = addons.TestUtils.createRenderer();
 
@@ -67,5 +68,15 @@ describe("Img", () => {
     result.props.onClick();
 
     assert.strictEqual(spyCallback.calledOnce, true);
+  });
+
+  it("responds to parent `reverse` context with right-floated styles", () => {
+    shallowRenderer.render(<Img href="">hi</Img>, { reverse: true });
+    result = shallowRenderer.getRenderOutput();
+
+    assert.deepEqual(result.props.style, {
+      float: "right",
+      marginLeft: 10
+    });
   });
 });
