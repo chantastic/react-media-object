@@ -322,35 +322,6 @@ var App = React.createClass({
             )
           )
         )
-      ),
-      React.createElement(
-        'h2',
-        { className: 'demo-heading' },
-        ' TODO '
-      ),
-      React.createElement(
-        'ul',
-        null,
-        React.createElement(
-          'li',
-          null,
-          'Why doesn\'t instanceOf work as expected?'
-        ),
-        React.createElement(
-          'li',
-          null,
-          'Expose styling props.'
-        ),
-        React.createElement(
-          'li',
-          null,
-          'Play with merging styles vs overriding.'
-        ),
-        React.createElement(
-          'li',
-          null,
-          'Add tests.'
-        )
       )
     );
   }
