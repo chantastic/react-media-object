@@ -157,14 +157,6 @@ var App = React.createClass({
             </Media>
           </div>
         </section>
-
-        <h2 className="demo-heading"> TODO </h2>
-        <ul>
-          <li>Why doesn't instanceOf work as expected?</li>
-          <li>Expose styling props.</li>
-          <li>Play with merging styles vs overriding.</li>
-          <li>Add tests.</li>
-        </ul>
       </div>
     );
   }
