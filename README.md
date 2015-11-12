@@ -1,15 +1,67 @@
 # React Media Object
 
-A React.js Media-Object
+This is a Media Object implementation in React.js.
+
+The CSS [Media Object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) was created by [Nicole Sullivan](https://twitter.com/stubbornella). It's an undeniably concise nugget of CSS. I love it.
+
+This project is part of a proof-of-concept for React inline-styles. In practice, can a Media Object component be as usefel and flexible as the original OOCSS version.
 
 
-## Demo & Examples
+## Installation
 
-Live demo: [chantastic.github.io/react-media-object](http://chantastic.github.io/react-media-object/)
+#### Node
 
-To build the examples locally, run:
-
+```bash
+npm install react-media-object --save
 ```
+
+#### In-browser
+
+```html
+<script src="./path/to/dist/react-media-object.js"></script>
+```
+
+*`React` must be available as a global when this script is run.*
+
+
+## Usage
+
+ReactMediaObject is four components, half of which are optional
+
+```html
+var { Media, Img, ImgExt, Bd } = require('react-media-object');
+
+var MediaObjectWithAllRegions = (
+  <Media>
+    <Img href="http://twitter.com/chantastic">
+      <ImgExt src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
+    </Img>
+
+    <Bd>
+      I've spent most of my career focused on taming styles in CSS. I saw it as a
+      problem that would never be solved. Then, <i>#reactjs</i> happened.
+    </Bd>
+  </Media>
+);
+
+var MediaObjectWithMinimalRegions = (
+  <Media>
+    <Bd>
+      I've spent most of my career focused on taming styles in CSS. I saw it as a
+      problem that would never be solved. Then, <i>#reactjs</i> happened.
+    </Bd>
+  </Media>
+);
+
+ReactDOM.render(MediaObjectWithAllRegions, mountNode);
+```
+
+
+## Development
+
+To build the examples locally, clone and run:
+
+```bash
 npm install
 npm start
 ```
@@ -17,46 +69,7 @@ npm start
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 
-## Installation
-
-The easiest way to use react-media-object is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
-
-You can also use the standalone build by including `dist/react-media-object.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
-
-```
-npm install react-media-object --save
-```
-
-
-## Usage
-
-ReactMediaObject is four components, half of which are optional
-
-```js
-var { Media, Img, ImgExt, Bd } = require('react-media-object');
-
-// With optional reagons
-<Media>
-  <Img href="http://twitter.com/chantastic">
-    <ImgExt src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
-  </Img>
-
-  <Bd>
-    I've spent most of my career focused on taming styles in CSS. I saw it as a
-    problem that would never be solved. Then, <i>#reactjs</i> happened.
-  </Bd>
-</Media>
-
-// With only required reagons
-<Media>
-  <Bd>
-    I've spent most of my career focused on taming styles in CSS. I saw it as a
-    problem that would never be solved. Then, <i>#reactjs</i> happened.
-  </Bd>
-</Media>
-```
-
-## Development (`src`, `lib` and the build process)
+#### Structure
 
 **NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.
 

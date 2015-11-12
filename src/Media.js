@@ -14,12 +14,13 @@ const clearfixStyles = {
 const styles = null;
 
 export default class Media extends Component {
-  render() {
+  getChildContext () {
+    return { reverse: this.props.reverse };
+  }
+
+  render () {
     return (
-      <div
-       {...this.props}
-       style={styleResolver(styles, this.props)}
-      >
+      <div {...this.props} style={styleResolver(styles, this.props)} >
         <div style={clearfixStyles[':before']} />
         {this.props.children}
         <div style={clearfixStyles[':after']} />
@@ -30,5 +31,12 @@ export default class Media extends Component {
 
 Media.propTypes = {
   children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,
   style: PropTypes.object
 };
+
+Media.childContextTypes = {
+  reverse: PropTypes.bool
+};
+
+export default Media;
