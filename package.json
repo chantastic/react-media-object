@@ -23,13 +23,13 @@
     "eslint-plugin-react": "^3.3.2",
     "gulp": "^3.8.11",
     "mocha": "^2.2.5",
-    "react": "^0.14.0-rc1",
+    "react": "^0.14.2",
     "react-component-gulp-tasks": "^0.7.0",
     "react-dom": "0.14.0-rc1",
     "sinon": "^1.16.1"
   },
   "peerDependencies": {
-    "react": ">=0.14.0-rc1"
+    "react": ">=0.14.0"
   },
   "browserify-shim": {
     "react": "global:React"
