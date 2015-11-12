@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 0.1.0
+
+* [BREAKING CHANGE] React 0.13 => React 0.14
+  * The dependency allows the lib to use parent-based context
+* [FEATURE] `reverse` prop for flipping the side of the avatar
+
 ### 0.0.8
 
 * [FIX] remove `.isRequired` from `Img` href PropType
